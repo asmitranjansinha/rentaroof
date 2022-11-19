@@ -1,5 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/parser.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../Elements/buttons.dart';
@@ -40,13 +42,9 @@ class _ProfileState extends State<Profile> {
             InkWell(
               onTap: () => scaffoldKey.currentState?.openDrawer(),
               child: Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(
-                          width: 0.5, color: greyColor.withOpacity(0.50)),
-                      borderRadius: BorderRadius.circular(15)),
                   padding:
-                      const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
-                  child: Image.asset(ImageConstants.manuBar)),
+                      const EdgeInsets.symmetric(vertical: 0, horizontal: 3),
+                  child: SvgPicture.asset(menu)),
             ),
             // InkWell(
             //   onTap: () => navigationPop(context),
@@ -73,13 +71,9 @@ class _ProfileState extends State<Profile> {
         ),
         actions: [
           Container(
-            decoration: BoxDecoration(
-                border:
-                    Border.all(width: 0.5, color: greyColor.withOpacity(0.50)),
-                borderRadius: BorderRadius.circular(15)),
             padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 0),
             margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
-            child: Image.asset(ImageConstants.bell),
+            child: SvgPicture.asset(notification),
           ),
         ],
       ),

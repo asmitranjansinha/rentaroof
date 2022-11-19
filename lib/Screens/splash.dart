@@ -69,15 +69,9 @@ class _SplashState extends State<Splash> {
                 top: 0.0,
               ),
               child: SvgPicture.asset(
-                appIcon,
-                height: 72,
-                width: 72,
+                logo,
+                height: 130,
               ),
-            ),
-            const SizedBox(height: 20),
-            Image.asset(
-              ImageConstants.logoText,
-              width: 150,
             ),
             const Spacer(),
             Padding(

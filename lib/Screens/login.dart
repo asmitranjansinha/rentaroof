@@ -48,9 +48,7 @@ class _LoginWidget2State extends State<LoginWidget2> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SvgPicture.asset(appIcon, height: 75,),
-                  heightSizedBox(20),
-                  Image.asset(ImageConstants.logoText, height: 18),
+                  SvgPicture.asset(logo, height: 130)
                 ],
               ),
             ),
@@ -93,7 +91,7 @@ class _LoginWidget2State extends State<LoginWidget2> {
                       hint: "**********",
                       suffixIcon: Padding(
                         padding: const EdgeInsets.only(right: 14.0),
-                        child: Image.asset(ImageConstants.eye, height: 17),
+                        child: SvgPicture.asset(eye, height: 14),
                       ),
                     ),
                   ),
@@ -131,7 +129,7 @@ class _LoginWidget2State extends State<LoginWidget2> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Don’t have an account?",
+                        "Don't have an account?",
                         style: TextStyle(color: greyColor),
                       ),
                       TextButton(

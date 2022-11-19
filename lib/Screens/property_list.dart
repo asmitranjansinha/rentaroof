@@ -90,7 +90,7 @@ class _PropertyListState extends State<PropertyList> {
                           child: InkWell(
                             child: Row(
                               children: [
-                                Image.asset(ImageConstants.search),
+                                SvgPicture.asset(search),
                                 widthSizedBox(15),
                                 Expanded(
                                   child: Text(
@@ -139,11 +139,9 @@ class _PropertyListState extends State<PropertyList> {
                 backgroundColor: whiteColor,
                 elevation: 10,
                 onPressed: () {},
-                child: Image.asset(
-                  ImageConstants.searchYellow,
-                  color: primaryYellowColor,
-                  height: 22,
-                  fit: BoxFit.fill,
+                child: SvgPicture.asset(
+                  search2,
+                  height: 100,
                 ),
               ),
             ),
