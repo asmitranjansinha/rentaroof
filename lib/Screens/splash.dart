@@ -1,6 +1,9 @@
+// ignore_for_file: avoid_print
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:rentaroof/Utils/common.dart';
 import 'package:rentaroof/Utils/iamge_constants.dart';
 
@@ -65,10 +68,10 @@ class _SplashState extends State<Splash> {
               padding: const EdgeInsets.only(
                 top: 0.0,
               ),
-              child: Image.asset(
-                ImageConstants.logo,
-                height: 100,
-                width: 100,
+              child: SvgPicture.asset(
+                appIcon,
+                height: 72,
+                width: 72,
               ),
             ),
             const SizedBox(height: 20),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:rentaroof/Utils/iamge_constants.dart';
 
 import '../Elements/buttons.dart';
@@ -109,8 +110,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       hint: "**********",
                       suffixIcon: Padding(
                         padding: const EdgeInsets.only(right: 14.0),
-                        child: Image.asset(
-                          ImageConstants.eye,
+                        child: SvgPicture.asset(
+                          eye,
                           height: 17,
                         ),
                       ),

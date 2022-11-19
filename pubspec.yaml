@@ -22,6 +22,7 @@ dependencies:
   carousel_slider: ^4.1.1
   cached_network_image: ^3.2.2
   shimmer: ^2.0.0
+  flutter_svg: ^1.1.6
 
 
 dev_dependencies:
@@ -38,4 +39,8 @@ flutter:
     - assets/
     - assets/Images/
     - assets/Images/drawer/
-
+    - assets/Icons/
+    - assets/Icons/detail page/
+    - assets/Icons/Manage visits/
+    - assets/Icons/menu/
+    - assets/Icons/sidemenu/

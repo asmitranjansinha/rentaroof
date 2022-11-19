@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:rentaroof/Elements/saved_item.dart';
 
 import '../Elements/drawer.dart';
@@ -29,13 +30,9 @@ class _SavedState extends State<Saved> {
             InkWell(
               onTap: () => scaffoldKey.currentState?.openDrawer(),
               child: Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(
-                          width: 0.5, color: greyColor.withOpacity(0.50)),
-                      borderRadius: BorderRadius.circular(15)),
                   padding:
                       const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
-                  child: Image.asset(ImageConstants.manuBar)),
+                  child: SvgPicture.asset(menu)),
             ),
             // InkWell(
             //   onTap: () => navigationPop(context),
@@ -62,13 +59,9 @@ class _SavedState extends State<Saved> {
         ),
         actions: [
           Container(
-            decoration: BoxDecoration(
-                border:
-                    Border.all(width: 0.5, color: greyColor.withOpacity(0.50)),
-                borderRadius: BorderRadius.circular(15)),
             padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 0),
             margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
-            child: Image.asset(ImageConstants.bell),
+            child: SvgPicture.asset(notification),
           ),
         ],
       ),

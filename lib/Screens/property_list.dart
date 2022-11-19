@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../Elements/apartment_item.dart';
 import '../Elements/drawer.dart';
@@ -39,8 +40,8 @@ class _PropertyListState extends State<PropertyList> {
                   child: Image.asset(ImageConstants.manuBar)),
             ),
             widthSizedBox(10),
-            Image.asset(
-              ImageConstants.logo,
+            SvgPicture.asset(
+              appIcon,
               height: 30,
             ),
             Expanded(
@@ -52,13 +53,9 @@ class _PropertyListState extends State<PropertyList> {
         ),
         actions: [
           Container(
-            decoration: BoxDecoration(
-                border:
-                    Border.all(width: 0.5, color: greyColor.withOpacity(0.50)),
-                borderRadius: BorderRadius.circular(15)),
             padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 0),
             margin: const EdgeInsets.symmetric(vertical: 8),
-            child: Image.asset(ImageConstants.bell),
+            child: SvgPicture.asset(notification),
           ),
           widthSizedBox(18),
         ],
@@ -105,7 +102,7 @@ class _PropertyListState extends State<PropertyList> {
                                 Container(
                                     height: 22, width: 1, color: greyColor),
                                 widthSizedBox(15),
-                                Image.asset(ImageConstants.filter),
+                                SvgPicture.asset(filter),
                               ],
                             ),
                           ),

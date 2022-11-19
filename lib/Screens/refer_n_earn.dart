@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:rentaroof/Elements/buttons.dart';
 
 import '../Elements/dash_rect.dart';
@@ -36,7 +37,7 @@ class _ReferNEarnState extends State<ReferNEarn> {
                       borderRadius: BorderRadius.circular(15)),
                   padding:
                       const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
-                  child: Image.asset(ImageConstants.back)),
+                  child: SvgPicture.asset(leftArrow)),
             ),
             // InkWell(
             //   onTap: () => navigationPop(context),
@@ -63,13 +64,9 @@ class _ReferNEarnState extends State<ReferNEarn> {
         ),
         actions: [
           Container(
-            decoration: BoxDecoration(
-                border:
-                    Border.all(width: 0.5, color: greyColor.withOpacity(0.50)),
-                borderRadius: BorderRadius.circular(15)),
             padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 0),
             margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
-            child: Image.asset(ImageConstants.bell),
+            child: SvgPicture.asset(notification)
           ),
         ],
       ),
@@ -118,19 +115,8 @@ class _ReferNEarnState extends State<ReferNEarn> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      decoration: const BoxDecoration(
-                          shape: BoxShape.circle, color: Color(0XFFE5E7F0)),
-                      padding: const EdgeInsets.all(15),
-                      child: Image.asset(ImageConstants.share),
-                    ),
-                    widthSizedBox(20),
-                    Container(
-                      decoration: const BoxDecoration(
-                          shape: BoxShape.circle, color: Color(0XFFE5E7F0)),
-                      padding: const EdgeInsets.all(15),
-                      child: Image.asset(ImageConstants.copy),
-                    ),
+                    SvgPicture.asset(share),
+                    SvgPicture.asset(copy)
                   ],
                 ),
               ],

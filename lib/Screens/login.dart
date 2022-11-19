@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:rentaroof/Utils/iamge_constants.dart';
 
 import '../Elements/buttons.dart';
@@ -47,7 +48,7 @@ class _LoginWidget2State extends State<LoginWidget2> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset(ImageConstants.logo),
+                  SvgPicture.asset(appIcon, height: 75,),
                   heightSizedBox(20),
                   Image.asset(ImageConstants.logoText, height: 18),
                 ],
