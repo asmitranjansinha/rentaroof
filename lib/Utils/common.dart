@@ -19,14 +19,6 @@ SizedBox widthSizedBox(double width) {
 double getTop(BuildContext context) {
   return MediaQuery.of(context).padding.top;
 }
-//
-// Divider divider({double? thickness}) {
-//   return Divider(
-//     height: 1,
-//     color: greyColor,
-//     thickness: thickness ?? 1,
-//   );
-// }
 
 double getHeight(BuildContext context) {
   return MediaQuery.of(context).size.height;

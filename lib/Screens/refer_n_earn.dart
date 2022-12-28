@@ -55,7 +55,7 @@ class _ReferNEarnState extends State<ReferNEarn> {
               child: Align(
                 alignment: Alignment.center,
                 child: Text(
-                  "Chat",
+                  "Refer and Earn",
                   style: mainHeadingTS,
                 ),
               ),
