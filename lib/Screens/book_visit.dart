@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../Elements/buttons.dart';
 import '../Elements/drawer.dart';
@@ -58,13 +59,9 @@ class _BookVisitState extends State<BookVisit> {
         ),
         actions: [
           Container(
-            decoration: BoxDecoration(
-                border:
-                    Border.all(width: 0.5, color: greyColor.withOpacity(0.50)),
-                borderRadius: BorderRadius.circular(15)),
-            padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 0),
+            padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
             margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
-            child: Image.asset(ImageConstants.bell),
+            child: SvgPicture.asset(notification),
           ),
         ],
       ),

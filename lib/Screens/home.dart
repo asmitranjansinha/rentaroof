@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:rentaroof/Screens/add_property.dart';
 import 'package:rentaroof/Screens/property_list.dart';
 
@@ -57,17 +58,13 @@ class _HomeState extends State<Home> {
             InkWell(
               onTap: () => scaffoldKey.currentState?.openDrawer(),
               child: Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(
-                          width: 0.5, color: greyColor.withOpacity(0.50)),
-                      borderRadius: BorderRadius.circular(15)),
                   padding:
-                      const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
-                  child: Image.asset(ImageConstants.manuBar)),
+                      const EdgeInsets.symmetric(vertical: 12, horizontal: 3),
+                  child: SvgPicture.asset(menu)),
             ),
             widthSizedBox(10),
-            Image.asset(
-              ImageConstants.logo,
+            SvgPicture.asset(
+              appIcon,
               height: 30,
             ),
           ],
@@ -97,13 +94,9 @@ class _HomeState extends State<Home> {
           ),
           widthSizedBox(8),
           Container(
-            decoration: BoxDecoration(
-                border:
-                    Border.all(width: 0.5, color: greyColor.withOpacity(0.50)),
-                borderRadius: BorderRadius.circular(15)),
             padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 0),
             margin: const EdgeInsets.symmetric(vertical: 8),
-            child: Image.asset(ImageConstants.bell),
+            child: SvgPicture.asset(notification),
           ),
           widthSizedBox(18),
         ],
@@ -134,7 +127,7 @@ class _HomeState extends State<Home> {
                     child: InkWell(
                       child: Row(
                         children: [
-                          Image.asset(ImageConstants.search),
+                          SvgPicture.asset(search),
                           widthSizedBox(15),
                           Expanded(
                             child: Text(
@@ -147,7 +140,7 @@ class _HomeState extends State<Home> {
                           widthSizedBox(15),
                           InkWell(
                             onTap: () => filterBottomSheet(context),
-                            child: Image.asset(ImageConstants.filter),
+                            child: SvgPicture.asset(filter),
                           ),
                         ],
                       ),

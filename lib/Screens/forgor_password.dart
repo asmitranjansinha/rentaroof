@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:rentaroof/Utils/iamge_constants.dart';
 
 import '../Elements/buttons.dart';
@@ -22,10 +23,10 @@ class _ForgotPasswordState extends State<ForgotPassword> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(),
       body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 25),
+        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
         children: [
           heightSizedBox(AppBar().preferredSize.height + getTop(context)),
-          Image.asset(ImageConstants.forgotPass),
+          SvgPicture.asset(forgotPassword),
           heightSizedBox(30),
           Text("Forgot",
               style: TextStyle(

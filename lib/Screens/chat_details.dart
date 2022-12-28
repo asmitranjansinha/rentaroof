@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../Utils/common.dart';
@@ -49,13 +50,9 @@ class _ChatDetailsState extends State<ChatDetails> {
         ),
         actions: [
           Container(
-            decoration: BoxDecoration(
-                border:
-                    Border.all(width: 0.5, color: greyColor.withOpacity(0.50)),
-                borderRadius: BorderRadius.circular(15)),
-            padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 0),
+            padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
             margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
-            child: Image.asset(ImageConstants.bell),
+            child: SvgPicture.asset(notification),
           ),
         ],
       ),
@@ -89,8 +86,9 @@ class _ChatDetailsState extends State<ChatDetails> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Expanded(
                     child: Container(
@@ -113,15 +111,10 @@ class _ChatDetailsState extends State<ChatDetails> {
                     ),
                   ),
                   widthSizedBox(15),
-                  Container(
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle, color: primaryBlueColor),
-                    padding: const EdgeInsets.all(12),
-                    child: Image.asset(
-                      ImageConstants.send,
-                      height: 22,
-                      fit: BoxFit.fill,
-                    ),
+                  SvgPicture.asset(
+                    send,
+                    height: 80,
+                    fit: BoxFit.fill,
                   ),
                 ],
               ),
