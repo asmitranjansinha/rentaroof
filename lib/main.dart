@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rentaroof/Screens/splash.dart';
-import 'package:rentaroof/Utils/style.dart';
+import 'package:rentaroof/views/splash.dart';
+import 'package:rentaroof/utils/style.dart';
 
 void main() {
   runApp(const MyApp());

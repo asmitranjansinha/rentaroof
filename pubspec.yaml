@@ -15,21 +15,21 @@ dependencies:
 
 
   cupertino_icons: ^1.0.2
-  motion_tab_bar_v2: ^0.2.6
+  motion_tab_bar_v2: ^0.3.0
   circular_bottom_navigation: ^2.2.0
   font_awesome_flutter: ^10.2.1
   shared_preferences: ^2.0.15
-  carousel_slider: ^4.1.1
+  carousel_slider: ^5.0.0
   cached_network_image: ^3.2.2
-  shimmer: ^2.0.0
-  flutter_svg: ^1.1.6
+  shimmer: ^3.0.0
+  flutter_svg: ^2.0.17
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.0
+  flutter_lints: ^5.0.0
 
 flutter:
 
